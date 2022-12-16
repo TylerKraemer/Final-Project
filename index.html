@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Maverick Drone Services</title>
+        <style>
+            h1 {text-align: center;}
+
+            h3 {text-align: center;}
+
+
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial;
+            }  
+
+
+            .tablink {
+                background-color: rgb(0, 0, 0);
+                color: white;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 25%;
+            }
+
+            .tablink:hover {
+            background-color: rgb(0, 0, 0);
+            color:rgb(178, 178, 178);
+            }
+
+
+            .tabcontent {
+            color: rgb(0, 0, 0);
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            }
+
+            #Home {background-color: rgb(133, 255, 52)}
+            #News {background-color:rgb(133, 255, 52);}
+            #Contact {background-color: rgb(133, 255, 52);}
+            #About {background-color: rgb(133, 255, 52);}
+
+        </style>
+    </head>
+    
+    <body style="background-color:rgb(133, 255, 52);">
+
+
+        <br>
+        <h1>Maverick Drone Services</h1>
+        <h3>Commercial and Residential</h3>
+
+        <button class="tablink" onclick="openPage('Home', this, '#8B0000')" id="defaultOpen">Home</button>
+        <button class="tablink" onclick="openPage('About', this, '#8B0000')">About</button>
+        <button class="tablink" onclick="openPage('Contact', this, '#8B0000')">Contact Us</button>
+        <button class="tablink" onclick="openPage('Availability', this, '#8B0000')">Availability</button>
+
+        <div id="Home" class="tabcontent">
+            <h3>Welcome to Maverick Drone Services!</h3>
+            <p>We are a company driven to delivering quality drone services to our customers in multiple different ways.</p>
+            <ul>What we offer:</ul>
+                <li>Real Estate Photography and Videography</li>
+                <li>Wedding Photography and Videography</li>
+                <li>Advertisment Photography and Videography</li>
+                <li>Ariel Inspections (Roofs, Gutters, Worksites)</li>
+                <li>Golf Course Flyovers</li>
+                <li>Got another idea? We are happy to help contact us with your idea!</li>
+            <br>
+            <br>
+            <h4>Examples of Our Work:</h4>
+
+            <video width="320" height="240" controls>
+                <source src="coachlite.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <br>
+            <br>
+
+            <video width="320" height="240" controls>
+                <source src="dingtea.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+        </div>
+
+        <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Some news this fine day!</p>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <h3>Contact Us</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+
+        <div id="Availability" class="tabcontent">
+            <h3>Availability</h3>
+            <p>Who we are and what we do.</p>
+        </div>
+        
+    <script>
+        function openPage(pageName, elmnt, color) {
+            
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(pageName).style.display = "block";
+
+            elmnt.style.backgroundColor = color;
+            }
+
+            document.getElementById("defaultOpen").click();
+    </script>
+
+    </body>
+
+
+
+
+
+</html>
